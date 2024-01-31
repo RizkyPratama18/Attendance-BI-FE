@@ -65,7 +65,7 @@ export default function FormCreateJob() {
 
     try {
       // Make a network request to your server
-      const response = await fetch('http://103.147.159.225:443/job/createJob', {
+      const response = await fetch('http://0.0.0.0:8080/job/createJob', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',

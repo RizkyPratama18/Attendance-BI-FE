@@ -40,7 +40,7 @@ export const SignIn: React.FC= () => {
       password: formData.get('password')
     }
 
-    const response = await fetch('http://103.147.159.225:443/user/login', {
+    const response = await fetch('http://0.0.0.0:8080/auth/login', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -52,7 +52,7 @@ export const SignIn: React.FC= () => {
     if (response.ok) {
       const token = await response.json()
       localStorage.setItem('token', token);
-      navigate('/CreateReport');
+      navigate('/Syncronize');
       setToken(token)
 
     }

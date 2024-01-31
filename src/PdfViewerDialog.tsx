@@ -68,7 +68,7 @@ const defaultLayoutPluginInstance = defaultLayoutPlugin();
     <div>
       {reportId ? 
     <Worker workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`}>
-        <Viewer fileUrl={`http://103.147.159.225:443/export/getReportFile/${reportId}`} plugins={[defaultLayoutPluginInstance]}/>
+        <Viewer fileUrl={`http://0.0.0.0:8080/export/getReportFile/${reportId}`} plugins={[defaultLayoutPluginInstance]}/>
       </Worker> : <CircularProgress/>}
 
     </div>

@@ -33,7 +33,7 @@ const DropdownSelectWithCheckboxes: React.FC<DropdownSelectWithCheckboxesProps> 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch ('http://103.147.159.225:443/export/getNode', {
+        const response = await fetch ('http://0.0.0.0:8080/export/getNode', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',

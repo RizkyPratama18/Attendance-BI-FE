@@ -15,15 +15,12 @@ const TopNavbar: React.FC = () => {
     <AppBar position="fixed" sx={{ backgroundColor: 'black' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Automation Report 
+          Report Attendance
         </Typography>
         {token ? (
           <>
             <Button color="warning">
-              <Link to="/createReport">Create Report</Link>
-            </Button>
-            <Button color="warning">
-              <Link to="/createJob">Create Job</Link>
+              <Link to="/Syncronize">Syncronize</Link>
             </Button>
             <Button color="warning" onClick={handleButtonClick}>
               <Link to="/">Logout</Link>

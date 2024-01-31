@@ -11,7 +11,6 @@ import {DateRangeForm} from './DateRangeForm';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import {TableCheckboxesGroup} from './TableCheckboxesGroup';
 import {GraphCheckboxesGroup} from './GraphCheckboxesGroup';
-import TableReportHistory from './TableReportHistory';
 import { Alert, Grid } from '@mui/material';
 import DropdownSelectWithCheckboxes from './DropdownSelectWithCheckboxes';
 import { useState } from 'react';
@@ -111,7 +110,7 @@ export default function FormCreateReport() {
 
     try {
       // Make a network request to your server
-      const response = await fetch('http://103.147.159.225:443/job/createJob', {
+      const response = await fetch('http://0.0.0.0:8080/job/createJob', {
         method: 'POST',
         headers: {
           'Content-type': 'application/json',
@@ -183,7 +182,7 @@ export default function FormCreateReport() {
       }
       try {
         // Make a network request to your server
-        const response = await fetch('http://103.147.159.225:443/export/createReport', {
+        const response = await fetch('http://0.0.0.0:8080/export/createReport', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -285,7 +284,6 @@ export default function FormCreateReport() {
               alignItems: 'center',
             }}
           >
-            <TableReportHistory />
           </Box>
         </Grid>
       </Grid>

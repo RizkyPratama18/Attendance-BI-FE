@@ -46,7 +46,7 @@ const DropdownSelectWithCheckboxesProject: React.FC<DropdownSelectWithCheckboxes
 
     const fetchDataRegions = async () => {
       try {
-        const response = await fetch ('http://103.147.159.225:443/export/getRegion', {
+        const response = await fetch ('http://0.0.0.0:8080/export/getRegion', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const DropdownSelectWithCheckboxesProject: React.FC<DropdownSelectWithCheckboxes
     
     const fetchDataDomains = async () => {
       try {
-        const response = await fetch ('http://103.147.159.225:443/export/getDomain', {
+        const response = await fetch ('http://0.0.0.0:8080/export/getDomain', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -87,7 +87,7 @@ const DropdownSelectWithCheckboxesProject: React.FC<DropdownSelectWithCheckboxes
     const fetchDataProject = async () => {
       try {
         const data  = {'domain' : selectedDomain}
-        const response = await fetch ('http://103.147.159.225:443/export/getProject', {
+        const response = await fetch ('http://0.0.0.0:8080/export/getProject', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

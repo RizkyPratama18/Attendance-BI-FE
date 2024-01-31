@@ -87,7 +87,7 @@ const [rowsPerPage, setRowsPerPage] = useState(8);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch ('http://103.147.159.225:443/export/getListJob', {
+        const response = await fetch ('http://0.0.0.0:8080/export/getListJob', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
