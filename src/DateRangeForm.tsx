@@ -1,6 +1,6 @@
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DateTimePicker, renderTimeViewClock } from '@mui/x-date-pickers';
+import { Button } from '@mui/material';
 
 
 interface DateRangeFormProps{
@@ -14,26 +14,16 @@ export const DateRangeForm: React.FC<DateRangeFormProps> = ({selectedStartDate,s
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <DateTimePicker sx={{marginTop : '16px', width :'100%'}}
-          label="Start Date Time" 
-          value={selectedStartDate}
-          onChange={(newDate) => setSelectedStartDate(newDate)}
-          viewRenderers={{
-            hours: renderTimeViewClock,
-            minutes: renderTimeViewClock,
-            seconds: renderTimeViewClock,
-          }}
-          />
-        <DateTimePicker sx={{marginTop : '16px', width :'100%'}}
-          label="End Date Time"
-          value={selectedEndDate}
-          onChange={(newDate) => setSelectedEndDate(newDate)}
-          viewRenderers={{
-            hours: renderTimeViewClock,
-            minutes: renderTimeViewClock,
-            seconds: renderTimeViewClock,
-          }}
-        />
+<Button
+  variant="contained"
+  component="label"
+>
+  Upload File
+  <input
+    type="file"
+    hidden
+  />
+</Button>
     </LocalizationProvider>
   );
 }
